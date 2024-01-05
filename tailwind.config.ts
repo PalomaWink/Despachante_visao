@@ -14,6 +14,15 @@ const config: Config = {
         'cinza-claro': '#D8D9D8',
         'verde': '#00893',
       },
+      backgroundImage: {
+        'main-image': "url('/cars-driving.jpg')",
+      },
+      height: {
+        '28rem': '28rem',
+      },
+      width: {
+        '35rem': '35rem',
+      },
     },
   },
   plugins: [],
