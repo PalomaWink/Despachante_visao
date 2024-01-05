@@ -12,7 +12,7 @@ function Footer() {
       <Link href="/" className="text-2xl sm:text-xl mx-2">
         <Instagram />
       </Link>
-      <Link href='/' className="text-2xl sm:text-xl mx-2">
+      <Link href='https://wa.me/5551996739085' target="_blank" rel="noopener noreferrer" className="text-2xl sm:text-xl mx-2">
         <Whatsapp />
       </Link>
     </nav>
