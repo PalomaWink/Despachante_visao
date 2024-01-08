@@ -12,7 +12,8 @@ const config: Config = {
         'laranja-forte': '#C9510C',
         'laranja-claro': '#EF7D00',
         'cinza-claro': '#D8D9D8',
-        'verde': '#00893',
+        'verde': '#008939',
+        'verde-escuro': '#00702e',
       },
       backgroundImage: {
         'main-image': "url('/cars-driving.jpg')",

@@ -16,7 +16,7 @@ export default function Instagram() {
           overflow: hidden;
           z-index: 1;
           color: #090909;
-          padding: 0.7em 1.0em 0.7em 1.0em;
+          padding: 0.3em 0.7em 0.3em 0.7em;
           font-size: 18px;
           border-radius: 0.5em;
           background: #e8e8e8;
