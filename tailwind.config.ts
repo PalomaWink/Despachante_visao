@@ -18,7 +18,7 @@ const config: Config = {
         'main-image': "url('/cars-driving.jpg')",
       },
       height: {
-        '28rem': '28rem',
+        '40rem': '40rem',
       },
       width: {
         '35rem': '35rem',
