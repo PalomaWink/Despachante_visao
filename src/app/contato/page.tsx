@@ -4,6 +4,7 @@
 import { useForm } from "react-hook-form"
 import { z } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
+import emailjs from '@emailjs/browser'
 
 // Tipagem
 import { Contato } from "../type"
@@ -27,16 +28,27 @@ export default function Page() {
   const { 
     register, 
     handleSubmit,
-    formState: { errors }
+    formState: { errors },
+    reset
   } = useForm<Contato>({
     resolver: zodResolver(validacaoDeContatoSchema)
   })
 
-  const [contato, setContato] = useState<Contato>()
-
   function onSubmitEmail(data: Contato) {
-    setContato(data)
+    const templateParams = {
+      from_name: data.nome,
+      from_email: data.email,
+      message: data.mensagem,
+    }
+    emailjs.send("service_hj1qzof", "template_pxo1wuc", templateParams, "AqLuZzCqpb48hDAPj")
+    .then((response) => {
+      console.log('SUCCESS!', response.status, response.text);
+      reset()
+    }, (err) => {
+      console.log('FAILED...', err);
+    })
   }
+
   return (
     <div className="h-screen flex justify-center items-center">
       <form
