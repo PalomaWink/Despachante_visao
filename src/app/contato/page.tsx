@@ -1,8 +1,8 @@
 
 export default function page() {
   return (
-    <div className="flex justify-center items-center m-10">
-      <form className="w-35rem h-auto border-laranja-forte border-2 border-solid rounded-md p-2">
+    <div className="h-screen flex justify-center items-center">
+      <form className="w-35rem border-laranja-forte border-2 border-solid rounded-md p-2 flex flex-col gap-4">
         <div className="flex flex-col">
           <label htmlFor="nome">Nome</label>
           <input type="text" name="nome" id="nome"/>
@@ -15,7 +15,9 @@ export default function page() {
           <label htmlFor="mensagem">Mensagem</label>
           <textarea name="mensagem" id="mensagem" />
         </div>
-        <button type="submit">Enviar</button>
+        <div className="flex justify-center items-center mt-10 mb-2">
+          <button type="submit" className="bg-laranja-claro rounded-xl w-32 h-8 hover:bg-laranja-forte hover:text-white shadow-lg">Enviar</button>
+        </div>
       </form>
     </div>
   )

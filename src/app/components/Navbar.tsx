@@ -21,7 +21,7 @@ function Navbar() {
         </div>
 
         {/* Links do menu */}
-        <div className={`${menu ? 'block' : 'hidden'} sm:flex flex-grow justify-evenly items-center h-20`}>
+        <div className={`${menu ? 'block' : 'hidden'} sm:flex flex-grow justify-evenly items-center h-14 shadow-xl`}>
           <button onClick={toggleMenu} className="absolute top-0 right-0 p-4 sm:hidden">
             <i className="bi bi-x-lg"></i>
           </button>

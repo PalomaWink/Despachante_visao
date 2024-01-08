@@ -3,7 +3,7 @@ import logoDetran from '../../public/logoDetran.png'
 
 export default function Home() {
   return (
-    <main className='relative h-40rem w-auto bg-main-image bg-cover bg-center'>
+    <main className='relative h-screen bg-main-image bg-cover bg-center'>
       <div className="absolute inset-0 bg-black opacity-65"></div>
       <div className="relative z-10 flex justify-center items-center h-full">
         <div className="absolute top-0 left-0 p-4 z-20">

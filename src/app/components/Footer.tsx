@@ -8,7 +8,7 @@ import Instagram from "./botoes/Instagram"
 
 function Footer() {
   return (
-    <nav className="fixed bottom-0 w-full flex justify-center items-center bg-cinza-claro p-4 shadow-xl top-shadow"> 
+    <nav className="bottom-0 flex justify-center items-center bg-cinza-claro p-4 shadow-xl top-shadow"> 
       <Link href="/" className="text-2xl sm:text-xl mx-2">
         <Instagram />
       </Link>
