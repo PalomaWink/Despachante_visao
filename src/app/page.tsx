@@ -1,5 +1,10 @@
-import Image from 'next/image'
+// Images e estilos
 import logoDetran from '../../public/logoDetran.png'
+
+// Components
+import Contato from '../app/contato/page'
+import Image from 'next/image'
+import Sobre from '../app/sobre/page'
 
 export default function Home() {
   return (
@@ -14,6 +19,8 @@ export default function Home() {
           <p className="text-gray-400 text-2xl mt-4">Sua melhor opção em serviços de despachante</p>
         </div>
       </div>
+      <Sobre />
+      <Contato />
     </main>
   )
 }

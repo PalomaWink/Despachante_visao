@@ -10,6 +10,9 @@ import { Contato } from "../type"
 
 // Componente
 import { useState } from "react"
+import Link from "next/link"
+import Instagram from "../components/botoes/Instagram"
+import Whatsapp from "../components/botoes/Whatsapp"
 
 const validacaoDeContatoSchema = z.object({
   nome: z.string().min(3, 'O campo do nome é obrigatorio').max(255).transform(name => {
@@ -78,6 +81,14 @@ export default function Page() {
           </button>
         </div>
       </form>
+      <nav className="bottom-0 flex justify-center items-center bg-cinza-claro p-4 shadow-xl top-shadow"> 
+        <Link href="/" className="text-2xl sm:text-xl mx-2">
+          <Instagram />
+        </Link>
+        <a href="https://wa.me/5551996739085" className="text-2xl sm:text-xl mx-2">
+          <Whatsapp />
+        </a>
+    </nav>
     </div>
   )
 }

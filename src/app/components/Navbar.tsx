@@ -1,7 +1,9 @@
 'use client'
 
+//componentes
 import Link from "next/link"
 import { useState } from "react"
+import Whatsapp from "./botoes/Whatsapp"
 function Navbar() {
   const [menu, setMenu] = useState(false)
 
@@ -25,10 +27,12 @@ function Navbar() {
           <button onClick={toggleMenu} className="absolute top-0 right-0 p-4 sm:hidden">
             <i className="bi bi-x-lg"></i>
           </button>
-          <Link href="/" className={`${menu ? 'mobile-menu-link' : 'navbar-button'}`}>Home</Link>
           <Link href="/servicos" className={`${menu ? 'mobile-menu-link' : 'navbar-button'}`}>Serviços</Link>
           <Link href="/sobre" className={`${menu ? 'mobile-menu-link' : 'navbar-button'}`}>Sobre nós</Link>
           <Link href="/contato" className={`${menu ? 'mobile-menu-link' : 'navbar-button'}`}>Contato</Link>
+          <a href="https://wa.me/5551996739085" className="sm:text-xl">
+            <Whatsapp />
+          </a>
         </div>
       </nav>
     </>
