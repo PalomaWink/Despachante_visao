@@ -3,9 +3,9 @@
 import Image from "next/image"
 import { servicos } from "../data/servicos"
 
-export default function page() {
+export default function Servicos() {
   return (
-    <div className="container mx-auto p-4">
+    <div id="servicos" className="container mx-auto p-4">
       <h1 className="text-3xl text-center font-bold my-8">Serviços</h1>
       <div className="grid md:grid-cols-3 gap-6">
         {

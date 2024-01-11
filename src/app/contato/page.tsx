@@ -26,7 +26,7 @@ const validacaoDeContatoSchema = z.object({
   email: z.string().email("Email inválido").min(10, "O campo do email é obrigatório").max(255).toLowerCase(),
   mensagem: z.string().min(3, 'O campo da mensagem é obrigatorio').max(255),
 })
-export default function Page() {
+export default function Contato() {
   const { 
     register, 
     handleSubmit,
@@ -52,7 +52,7 @@ export default function Page() {
   }
 
   return (
-    <div className="h-screen flex flex-col justify-center items-center">
+    <div id="contato" className="h-screen flex flex-col justify-center items-center">
       <h1 className="text-4xl mb-10 text-laranja-claro font-bold text-center">Entre em contato conosco!</h1>
       <div className="flex justify-center items-center">
         <div className="grid grid-cols-4 w-full">
