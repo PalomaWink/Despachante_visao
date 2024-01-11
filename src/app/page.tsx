@@ -5,6 +5,7 @@ import logoDetran from '../../public/logoDetran.png'
 import Contato from '../app/contato/page'
 import Image from 'next/image'
 import Sobre from '../app/sobre/page'
+import Servicos from '../app/servicos/page'
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         </div>
       </div>
       <Sobre />
+      <Servicos />
       <Contato />
     </main>
   )
