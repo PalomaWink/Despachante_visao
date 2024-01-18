@@ -18,9 +18,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body className={`${roboto.className} bg-cinza-claro`}>
+      <body className={`${roboto.className} bg-cinza-claro flex flex-col min-h-screen`}>
         <Navbar />
-        {children}
+          {children}
         <Footer />
       </body>
     </html>

@@ -29,7 +29,7 @@ function Navbar() {
   return (
       <>
       {menu && <div className="overlay" onClick={toggleMenu}></div>}
-      <nav className="flex justify-start shadow-lg bg-cinza-claro">
+      <nav className="flex justify-start">
         {/* Ícone do menu para telas pequenas */}
         <div className="sm:hidden">
           <button onClick={toggleMenu}>
