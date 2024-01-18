@@ -24,6 +24,10 @@ const config: Config = {
       width: {
         '35rem': '35rem',
       },
+      screens: {
+        'xs-custom': '320px',
+        'sm-custom': '428px',
+      },
     },
   },
   plugins: [],
