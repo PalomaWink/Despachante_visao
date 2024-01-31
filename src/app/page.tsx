@@ -15,7 +15,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-black opacity-65"></div>
         <div className="relative z-10 flex justify-center items-center h-full">
           <div className="absolute top-0 left-0 p-4 z-20">
-            <Image src={logoDetran} alt='Logo do Detran' className="w-full sm:w-2/3 md:w-3/4 lg:w-3/4 xl:w-3/4 xs-custom:w-20"/>
+            <Image src={logoDetran} alt='Logo do Detran' className="w-full h-auto sm:w-2/3 sm:h-auto md:w-3/4 md:h-auto lg:w-3/4 lg:h-auto xl:w-3/4 xl:h-auto xs-custom:w-20 xs-custom:h-auto"/>
           </div>
           <div className="text-center">
             <h1 className="text-laranja-claro text-7xl mt-4 shadow-lg sm:text-5xl md:text-6xl lg:text-7xl xl:text-7xl xs-custom:text-3xl">DESPACHANTE VISÃO</h1>

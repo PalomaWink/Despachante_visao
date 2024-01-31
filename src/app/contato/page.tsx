@@ -52,42 +52,42 @@ export default function Contato() {
   }
 
   return (
-    <div id="contato" className="h-screen flex flex-col justify-center items-center">
-      <h1 className="text-4xl mb-10 text-laranja-claro font-bold text-center">Entre em contato conosco!</h1>
+    <div id="contato" className="h-screen flex flex-col justify-center items-center sm:mt-20 sm:mb-20 text-black">
+      <h1 className="text-4xl mb-10 text-laranja-claro font-bold text-center sm:text-3xl">Entre em contato conosco!</h1>
       <div className="flex justify-center items-center">
-        <div className="grid grid-cols-4 w-full">
+        <div className="grid grid-cols-4 w-full h-auto sm:flex sm:flex-col-reverse sm:gap-5">
           <div className="col-span-2 flex flex-col justify-center items-end mr-9">
-            <span className="flex justify-center items-center w-96 mt-5">
+            <span className="flex justify-center items-center w-96 h-auto mt-5">
               <div className="mr-2">
                 <BsTelephone/>
               </div>
               (51) 3056-4808 <b className="ml-2">Escriório</b>
             </span>
-            <span className="flex justify-center items-center w-96 mt-5">
+            <span className="flex justify-center items-center w-96 h-auto mt-5">
               <div className="mr-2">
                 <FcPhoneAndroid />
               </div>
               (51) 9 9673-9085 <b className="ml-2">Escriório</b>
             </span>
-            <span className="flex justify-center items-center w-96 mt-5">
+            <span className="flex justify-center items-center w-96 h-auto mt-5">
               <div className="mr-2">
                 <FcPhoneAndroid />
               </div>
               (51) 9 9676-0159 <b className="ml-2">Guilherme</b>
             </span>
-            <span className="flex justify-center items-center w-96 mt-5">
+            <span className="flex justify-center items-center w-96 h-auto mt-5">
               <div className="mr-2">
                 <FcPhoneAndroid />
               </div>
               (51) 9 9673-9209 <b className="ml-2">Francisco</b>
             </span>
-            <span className="flex justify-center items-center w-96 mt-5 mb-5">
+            <span className="flex justify-center items-center w-96 h-auto mt-5 mb-5">
               <div className="mr-2">
                 <BsEnvelopeAt />
               </div>
               despachantechico@hotmail.com
             </span>
-            <nav className="flex flex-col justify-center items-center gap-4  w-96"> 
+            <nav className="flex flex-col justify-center items-center gap-4  w-96 h-auto"> 
               <Link href="/" className="text-2xl sm:text-xl mx-2">
                 <Instagram />
               </Link>
@@ -98,14 +98,14 @@ export default function Contato() {
           </div>
           <form
             onSubmit={handleSubmit(onSubmitEmail)}
-            className="col-span-2 w-full max-w-xl border-laranja-forte border-2 border-solid rounded-md p-2 flex flex-col gap-4"
+            className="col-span-2 w-full h-auto max-w-xl border-laranja-forte border-2 border-solid rounded-md p-2 flex flex-col gap-4"
           >
             <div className="flex flex-col">
               <label htmlFor="nome">Nome</label>
               <input 
                 type="text"
                 id="nome"
-                className="border border-solid border-zinc-200 rounded shadow-sm h-10 px-3 focus:border-laranja-forte"
+                className="border border-solid border-zinc-200 bg-white rounded shadow-sm h-10 px-3 focus:border-laranja-forte"
                 {...register("nome")} 
               />
               {errors.nome && <span className="text-red-600 text-sm">{errors.nome.message}</span>}
@@ -115,7 +115,7 @@ export default function Contato() {
               <input 
                 type="email" 
                 id="email"
-                className="border border-solid border-zinc-200 rounded shadow-sm h-10 px-3 focus:border-laranja-forte"
+                className="border border-solid border-zinc-200 bg-white rounded shadow-sm h-10 px-3 focus:border-laranja-forte"
                 {...register("email")} 
               />
               {errors.email && <span className="text-red-600 text-sm">{errors.email.message}</span>}
@@ -124,7 +124,7 @@ export default function Contato() {
               <label htmlFor="mensagem">Mensagem</label>
               <textarea 
                 id="mensagem"
-                className="border border-solid border-zinc-200 rounded shadow-sm h-20 px-3 py-2 focus:border-laranja-forte"
+                className="border border-solid border-zinc-200 bg-white rounded shadow-sm h-20 px-3 py-2 focus:border-laranja-forte"
                 {...register("mensagem")} 
               />
               {errors.mensagem && <span className="text-red-600 text-sm">{errors.mensagem.message}</span>}
