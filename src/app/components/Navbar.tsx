@@ -5,11 +5,7 @@ import Link from "next/link"
 import { useState } from "react"
 import Whatsapp from "./botoes/Whatsapp"
 function Navbar() {
-  const [menu, setMenu] = useState(false)
-
-  function toggleMenu() {
-    setMenu(!menu)
-  }
+  const [drawerOpen, setDrawerOpen] = useState(false);
 
   const handleScroll = (e: React.MouseEvent, id: string) => {
     e.preventDefault();
@@ -26,33 +22,38 @@ function Navbar() {
 
   const handleLinkClick = (e: React.MouseEvent, id: string) => {
     handleScroll(e, id);
-    setMenu(false);
+    setDrawerOpen(false);
   }
 
   return (
-      <>
-      {menu && <div className="overlay" onClick={toggleMenu}></div>}
-      <nav className="flex justify-start">
-        {/* Ícone do menu para telas pequenas */}
-        <div className="sm:hidden">
-          <button onClick={toggleMenu}>
-            <i className="bi bi-list"></i>
-          </button>
-        </div>
-        {/* Links do menu */}
-        <div className={`${menu ? 'block' : 'hidden'} sm:flex flex-grow justify-evenly items-center h-14 shadow-xl xs-custom:bg-cinza-claro`}>
-          <button onClick={toggleMenu} className="absolute top-0 right-0 p-4 sm:hidden">
-            <i className="bi bi-x-lg"></i>
-          </button>
-          <Link onClick={(e) => handleLinkClick(e, 'servicos')} href="#servicos" className={`${menu ? 'mobile-menu-link' : 'navbar-button'}`}>Serviços</Link>
-          <Link onClick={(e) => handleLinkClick(e, 'sobre')} href="#sobre" className={`${menu ? 'mobile-menu-link' : 'navbar-button'}`}>Sobre nós</Link>
-          <Link onClick={(e) => handleLinkClick(e, 'contato')} href="#contato" className={`${menu ? 'mobile-menu-link' : 'navbar-button'}`}>Contato</Link>
+    <div className="drawer" style={{ zIndex: 1000 }}>
+    <input id="my-drawer" type="checkbox" className="drawer-toggle" checked={drawerOpen} onChange={() => setDrawerOpen(!drawerOpen)} />
+    <div className="drawer-content flex flex-col">
+      <nav className="flex justify-between items-center p-4 xs-custom:p-0 xs-custom:mr-5">
+        <button onClick={() => setDrawerOpen(true)} className="btn btn-square btn-ghost sm:hidden">
+          <i className="bi bi-list"></i>
+        </button>
+        { !drawerOpen && (
           <a href="https://wa.me/5551996739085" className="sm:text-xl">
             <Whatsapp />
           </a>
-        </div>
+        )}
       </nav>
-    </>
+    </div>
+    <div className="drawer-side">
+      <label htmlFor="my-drawer" className="drawer-overlay"></label>
+      <ul className="menu p-4 w-80 bg-base-200">
+        <li>
+          <button onClick={() => setDrawerOpen(false)} className="btn btn-square btn-ghost">
+            <i className="bi bi-x-lg"></i>
+          </button>
+        </li>
+        <li><Link href="#servicos" onClick={(e) => handleLinkClick(e, 'servicos')}>Serviços</Link></li>
+        <li><Link href="#sobre" onClick={(e) => handleLinkClick(e, 'sobre')}>Sobre nós</Link></li>
+        <li><Link href="#contato" onClick={(e) => handleLinkClick(e, 'contato')}>Contato</Link></li>
+      </ul>
+    </div>
+  </div>
   )
 }
 
